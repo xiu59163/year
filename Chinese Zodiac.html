@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const zoo = ["鼠", "雞", "猴", "龍", "馬"];
+      const Zodiac = [
+        {
+          name: "鼠",
+          num: 1,
+        },
+        {
+          name: "雞",
+          num: 10,
+        },
+        {
+          name: "猴",
+          num: 9,
+        },
+        {
+          name: "龍",
+          num: 5,
+        },
+        {
+          name: "馬",
+          num: 7,
+        },
+        {
+          name: "牛",
+          num: 2,
+        },
+        {
+          name: "虎",
+          num: 3,
+        },
+        {
+          name: "兔",
+          num: 4,
+        },
+        {
+          name: "蛇",
+          num: 6,
+        },
+        {
+          name: "羊",
+          num: 8,
+        },
+        {
+          name: "狗",
+          num: 11,
+        },
+        {
+          name: "豬",
+          num: 12,
+        },
+      ];
+      zoo.sort((a, b) => {
+        const aZodiac = Zodiac.find((item) => item.name === a);
+        const bZodiac = Zodiac.find((item) => item.name === b);
+        return aZodiac.num - bZodiac.num;
+      });
+
+      console.log("十二生肖排序(自訂排序):");
+      console.log("將:鼠,雞,猴,龍,馬依據十二生肖排序順序進行遞增排序:");
+      console.log(zoo);
+    </script>
+  </body>
+</html>
